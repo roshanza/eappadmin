@@ -1,0 +1,47 @@
+# The following is standard Spring Security OAuth2 configuration.
+#jdbc:sqlserver://rzmssqldb.database.windows.net:1433;database=MLAUEAPP;user=db2inst1@rzmssqldb;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+
+#debug: true
+spring:
+  datasource:
+    #url: jdbc:db2://10.174.142.34:50000/MLAUEAPP
+    url: jdbc:sqlserver://rzmssqldb.database.windows.net:1433;database=MLAUEAPP
+    username: db2inst1
+    #password: metlife123
+    password: Aqee9161
+    #driver-class-name: com.ibm.db2.jcc.DB2Driver
+    schema: EAPPOCC    
+    dbcp2:
+      default-schema: EAPPOCC 
+      
+
+  jpa:
+    show-sql: true      
+    hibernate:
+      ddl-auto: true
+    properties:
+      hibernate:
+        default_schema: EAPPOCC
+        #dialect: org.hibernate.dialect.DB2Dialect      
+        dialect: org.hibernate.dialect.SQLServerDialect
+   
+  security:    
+    oauth2:
+      resourceserver:
+        jwt:
+          # Replace with the domain of your Auth0 tenant.
+          # Note the trailing slash is important!
+          issuer-uri: https://ssologin2.metlife.com.au/sso
+          #issuer-uri: https://dev-hqe4jlhw.au.auth0.com/
+          jwk-set-uri: https://ssologin2.metlife.com.au/sso/ext/oauth/jwks
+          #jwk-set-uri: https://dev-hqe4jlhw.au.auth0.com/.well-known/jwks.json
+     
+  mvc:
+    log-request-details: true
+  
+#logging:
+ # level:
+  #  org.hibernate.SQL: DEBUG
+   # org.hibernate.type: TRACE
+           
+          
