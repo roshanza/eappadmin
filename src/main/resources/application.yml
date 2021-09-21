@@ -28,9 +28,9 @@ spring:
         jwt:
           # Replace with the domain of your Auth0 tenant.
           # Note the trailing slash is important!
-          issuer-uri: https://ssologin2.metlife.com.au/sso
+          issuer-uri: https://ssologin.metlife.com.au/sso
           #issuer-uri: https://dev-hqe4jlhw.au.auth0.com/
-          jwk-set-uri: https://ssologin2.metlife.com.au/sso/ext/oauth/jwks
+          jwk-set-uri: https://ssologin.metlife.com.au/sso/ext/oauth/jwks
           #jwk-set-uri: https://dev-hqe4jlhw.au.auth0.com/.well-known/jwks.json
      
   mvc:
