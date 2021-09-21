@@ -36,8 +36,9 @@ spring:
   mvc:
     log-request-details: true
   
-#logging:
- # level:
+logging:
+  #level:
+  file: /home/LogFiles/boot.log
   #  org.hibernate.SQL: DEBUG
    # org.hibernate.type: TRACE
            
