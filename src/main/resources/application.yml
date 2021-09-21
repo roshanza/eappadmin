@@ -10,9 +10,7 @@ spring:
     #password: metlife123
     password: Aqee9161
     #driver-class-name: com.ibm.db2.jcc.DB2Driver
-    schema: EAPPOCC    
-    dbcp2:
-      default-schema: EAPPOCC 
+    
       
 
   jpa:
