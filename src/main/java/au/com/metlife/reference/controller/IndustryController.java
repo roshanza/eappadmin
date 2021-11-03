@@ -37,7 +37,7 @@ public class IndustryController {
 	public  ResponseEntity <?>getIndustryV1(@ApiParam(hidden = true) @AuthenticationPrincipal Jwt jwt) {		
 				
 		String fund=CommonUtils.getFundCodeFromJWT(jwt);		
-		List<IndustryDTO> industry=indService.getIndustries(fund);
+		
 		return new ResponseEntity<String>(fund,HttpStatus.OK);	
 	}
 	
