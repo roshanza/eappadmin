@@ -36,9 +36,9 @@ public class IndustryController {
 	
 	public  ResponseEntity <?>getIndustryV1(@ApiParam(hidden = true) @AuthenticationPrincipal Jwt jwt) {		
 				
-		String fund=CommonUtils.getFundCodeFromJWT(jwt);		
+		//String fund=CommonUtils.getFundCodeFromJWT(jwt);		
 		
-		return new ResponseEntity<String>(fund,HttpStatus.OK);	
+		return new ResponseEntity<String>(jwt.toString(),HttpStatus.OK);	
 	}
 	
 	
