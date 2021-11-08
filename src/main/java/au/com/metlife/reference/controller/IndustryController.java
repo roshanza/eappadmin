@@ -38,7 +38,7 @@ public class IndustryController {
 				
 		//String fund=CommonUtils.getFundCodeFromJWT(jwt);		
 		
-		return new ResponseEntity<String>(jwt.toString(),HttpStatus.OK);	
+		return new ResponseEntity<Jwt>(jwt,HttpStatus.OK);	
 	}
 	
 	
