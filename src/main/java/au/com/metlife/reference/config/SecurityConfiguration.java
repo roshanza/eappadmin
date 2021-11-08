@@ -34,11 +34,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         
 		
 		  http.authorizeRequests() .antMatchers("/api/public").permitAll()
-		  .antMatchers("/services/private").authenticated()
+		  .antMatchers("/api/**").authenticated()
 		  //.antMatchers("/services").authenticated()
-		  .antMatchers("/api/private-scoped").hasAuthority("SCOPE_read:messages")
+		  //.antMatchers("/api/private-scoped").hasAuthority("SCOPE_read:messages")
 		  //.antMatchers("/api/*").hasAuthority("SCOPE_fund_read")
-		  .antMatchers("/api/secure/**").hasAuthority("SCOPE_fund_read") 
+		  //.antMatchers("/api/secure/**").hasAuthority("SCOPE_fund_read") 
 		  
 		  .antMatchers(HttpMethod.POST,"/api/admin/**").hasAuthority("SCOPE_fund_read")
 		  //.antMatchers(HttpMethod.POST,"/api/admin/**").hasAuthority("SCOPE_admin")
